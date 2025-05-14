@@ -1,8 +1,8 @@
-package com.example.urlshortener.controller;
+package com.example.urlshortener.infrastructure.controller;
 
-import com.example.urlshortener.model.dto.ShortenUrlRequest;
-import com.example.urlshortener.model.dto.ShortenUrlResponse;
-import com.example.urlshortener.service.UrlService;
+import com.example.urlshortener.infrastructure.web.dto.ShortenUrlRequest;
+import com.example.urlshortener.infrastructure.web.dto.ShortenUrlResponse;
+import com.example.urlshortener.application.service.UrlService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
@@ -32,7 +32,7 @@ public class UrlController {
 
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.FOUND)
-    public ResponseEntity<ShortenUrlResponse> getUrl(@PathVariable("id") String id) {
+    public ResponseEntity<Void> getUrl(@PathVariable("id") String id) {
         System.out.println(id);
         String url = urlService.getUrl(id);
 

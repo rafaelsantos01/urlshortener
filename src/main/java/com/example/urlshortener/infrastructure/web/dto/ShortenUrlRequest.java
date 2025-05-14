@@ -1,4 +1,4 @@
-package com.example.urlshortener.model.dto;
+package com.example.urlshortener.infrastructure.web.dto;
 
 import jakarta.validation.constraints.NotBlank;
 
