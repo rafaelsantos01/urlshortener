@@ -8,12 +8,12 @@ public class Url {
 
     private String fullUrl;
 
-    private LocalDateTime expiraAt;
+    private LocalDateTime expireAt;
 
-    public Url(String id, String fullUrl, LocalDateTime expiraAt) {
+    public Url(String id, String fullUrl, LocalDateTime expireAt) {
         this.id = id;
         this.fullUrl = fullUrl;
-        this.expiraAt = expiraAt;
+        this.expireAt = expireAt;
     }
 
     public String getId() {
@@ -31,12 +31,12 @@ public class Url {
         this.fullUrl = fullUrl;
     }
 
-    public LocalDateTime getExpiraAt() {
-        return expiraAt;
+    public LocalDateTime getExpireAt() {
+        return expireAt;
     }
 
-    public void setExpiraAt(LocalDateTime expiraAt) {
-        this.expiraAt = expiraAt;
+    public void setExpireAt(LocalDateTime expiraAt) {
+        this.expireAt = expiraAt;
     }
 
 

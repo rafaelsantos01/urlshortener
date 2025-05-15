@@ -22,14 +22,14 @@ public class UrlEntity {
 
     private String fullUrl;
 
-    private LocalDateTime expiraAt;
+    private LocalDateTime expireAt;
 
     public Url toDomain() {
-        return new Url(id, fullUrl, expiraAt);
+        return new Url(id, fullUrl, expireAt);
     }
 
 
     public static UrlEntity fromDomain(Url url) {
-        return new UrlEntity(url.getId(), url.getFullUrl(), url.getExpiraAt());
+        return new UrlEntity(url.getId(), url.getFullUrl(), url.getExpireAt());
     }
 }
